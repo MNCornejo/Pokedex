@@ -1,8 +1,9 @@
 import { useRef, useState } from 'react'
 import { useName } from '../context/nameContext'
 import { Link, useNavigate } from 'react-router'
+import styles from './Home.module.css';
 
-function Home () {
+function Home() {
   const [error, setError] = useState<string | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const navigate = useNavigate()
@@ -25,23 +26,37 @@ function Home () {
   }
 
   return (
-    <div>
-      {!name && (<>
-        <h1>Bienvenidos</h1>
-        <p>Para comenzar ingresa tu nombre</p>
-        <input type="text" ref={inputRef} placeholder='escribe tu nombre' />
-        <button type='button' onClick={handleSetName}>
-          Comenzar
-        </button>
-      </>)}
+    <div className="container">
+      {!name && (
+        <section className={styles.hero}>
+          <div className={styles.card}>
+            <h1 className={styles.title}>Bienvenidos</h1>
+            <p className={styles.subtitle}>Para comenzar ingresa tu nombre</p>
 
-      {name && (<>
-        <h2>Hola de nuevo {name},{' '}
-          ir a tu <Link to="/pokedex">Pokedex</Link>
-        </h2>
-      </>)}
+            <form className={styles.form} onSubmit={(e) => { e.preventDefault(); handleSetName(); }}>
+              <input
+                className={styles.input}
+                type="text"
+                ref={inputRef}
+                placeholder="Escribe tu nombre"
+              />
+              <button className={styles.button} type="submit">
+                Comenzar
+              </button>
+            </form>
 
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+            {error && <p className="muted" style={{ color: 'var(--danger)', marginTop: 'var(--s-3)' }}>{error}</p>}
+          </div>
+        </section>
+      )}
+
+      {name && (
+        <section>
+          <h2 className="title">
+            Hola de nuevo {name}, <Link to="/pokedex">ir a tu Pokedex</Link>
+          </h2>
+        </section>
+      )}
     </div>
   )
 }

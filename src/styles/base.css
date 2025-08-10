@@ -12,6 +12,8 @@ button{cursor:pointer}
 :focus-visible{outline:2px solid var(--ring);outline-offset:2px}
 .cards a { color: inherit; text-decoration: none; display: block; }
 .cards a:hover { text-decoration: none; }
+a { color: inherit; text-decoration: none; }
+a :hover { text-decoration: underline; }
 
 /* App shell */
 .app{min-height:100%;display:flex;flex-direction:column}

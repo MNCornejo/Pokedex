@@ -1,0 +1,11 @@
+.content { display:flex; flex-direction:column; gap: var(--s-6); }
+.pagination { display:flex; align-items:center; justify-content:space-between; gap: var(--s-4); }
+.pages { display:flex; flex-wrap:wrap; gap: var(--s-2); }
+.badge { font-size: var(--fs-sm); color: var(--muted); }
+.btn { background: var(--surface-3); color: var(--text); border:1px solid rgba(255,255,255,0.08); padding: 8px 12px; border-radius: 10px; transition: .2s background, .2s transform; }
+.btn:hover:not(:disabled){ background: var(--surface-2); transform: translateY(-1px); }
+.btn:disabled{ opacity:.5; cursor:not-allowed; }
+.btn.active{ background: var(--primary); border-color: transparent; color: #0e1118; font-weight:700; }
+.cards { display:grid; grid-template-columns: repeat(1, minmax(0,1fr)); gap: var(--s-6); }
+@media (min-width: 520px){ .cards { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (min-width: 860px){ .cards { grid-template-columns: repeat(3, minmax(0,1fr)); } }

@@ -1,0 +1,37 @@
+/* Design tokens - dark theme y colores por tipo */
+:root {
+  /* Base */
+  --bg: #0e1118;
+  --surface: #151a22;
+  --surface-2: #1b2433;
+  --surface-3: #212b3d;
+  --text: #e8eef6;
+  --muted: #a9b4c7;
+  --primary: #5b7fff;
+  --accent: #ffcc00;
+  --success: #6ee7b7;
+  --danger: #f87171;
+  --ring: #5b7fff55;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --radius: 14px;
+  --radius-sm: 10px;
+
+  /* Spacing */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px; --s-12: 48px;
+
+  /* Tipografía */
+  --font-sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  --font-head: "Outfit", var(--font-sans);
+  --fs-xs: 12px; --fs-sm: 14px; --fs-base: 16px; --fs-md: 18px; --fs-lg: 22px; --fs-xl: 28px; --fs-2xl: 34px;
+
+  /* Colores por tipo */
+  --t-normal:#A8A77A; --t-fire:#EE8130; --t-water:#6390F0; --t-electric:#F7D02C;
+  --t-grass:#7AC74C; --t-ice:#96D9D6; --t-fighting:#C22E28; --t-poison:#A33EA1;
+  --t-ground:#E2BF65; --t-flying:#A98FF3; --t-psychic:#F95587; --t-bug:#A6B91A;
+  --t-rock:#B6A136; --t-ghost:#735797; --t-dragon:#6F35FC; --t-dark:#705746;
+  --t-steel:#B7B7CE; --t-fairy:#D685AD;
+}
+
+/* Chips por tipo (utilidad global) */
+.type-chip { padding: 4px 10px; border-radius: 999px; font-weight: 600; font-size: var(--fs-sm); color: #0e1118; text-transform: capitalize; }
+.type-normal{ background: var(--t-normal);} .type-fire{ background: var(--t-fire);} .type-water{ background: var(--t-water);} .type-electric{ background: var(--t-electric);} .type-grass{ background: var(--t-grass);} .type-ice{ background: var(--t-ice);} .type-fighting{ background: var(--t-fighting);} .type-poison{ background: var(--t-poison);} .type-ground{ background: var(--t-ground);} .type-flying{ background: var(--t-flying);} .type-psychic{ background: var(--t-psychic);} .type-bug{ background: var(--t-bug);} .type-rock{ background: var(--t-rock);} .type-ghost{ background: var(--t-ghost);} .type-dragon{ background: var(--t-dragon);} .type-dark{ background: var(--t-dark); color: #fff;} .type-steel{ background: var(--t-steel);} .type-fairy{ background: var(--t-fairy);}

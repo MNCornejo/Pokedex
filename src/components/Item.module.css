@@ -1,0 +1,13 @@
+.card { position:relative; overflow:hidden; border-radius: var(--radius); background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.06); box-shadow: var(--shadow); padding: var(--s-5); transition: transform .2s, box-shadow .2s; }
+.card:hover{ transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,.45) }
+.thumb { display:flex; align-items:center; justify-content:center; height: 180px; background: var(--surface-2); border-radius: var(--radius-sm); margin-bottom: var(--s-4); }
+.number { position:absolute; top: var(--s-4); right: var(--s-4); font-weight:800; font-family: var(--font-head); opacity:.4 }
+.name {
+  font-family: var(--font-head);
+  text-transform: capitalize;
+  font-size: var(--fs-lg);
+  margin-bottom: var(--s-3);
+  color: var(--text);          
+  text-decoration: none;        
+}
+.types { display:flex; gap: var(--s-2); flex-wrap: wrap; }

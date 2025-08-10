@@ -56,3 +56,18 @@
 }
 .button:hover { transform: translateY(-1px); filter: brightness(1.05); }
 .button:active { transform: translateY(0); }
+
+.centerWrap {
+  min-height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+  padding: var(--s-8) var(--s-6);
+}
+
+.bigTitle {
+  font-family: var(--font-head);
+  font-weight: 800;
+  text-align: center;
+  font-size: clamp(28px, 6vw, 56px);
+}
+.bigTitle a span { color: var(--danger) !important; }

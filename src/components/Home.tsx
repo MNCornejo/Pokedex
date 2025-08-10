@@ -51,9 +51,12 @@ function Home() {
       )}
 
       {name && (
-        <section>
-          <h2 className="title">
-            Hola de nuevo {name}, <Link to="/pokedex">ir a tu Pokedex</Link>
+        <section className={styles.centerWrap}>
+          <h2 className={styles.bigTitle}>
+            Hola de nuevo {name},{" "}
+            <Link to="/pokedex">
+              ir a tu <span className={styles.accentRed}>Pokedex</span>
+            </Link>
           </h2>
         </section>
       )}
